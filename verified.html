@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Verified • FridgeF</title>
+  <style>
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: system-ui, sans-serif;
+      background: radial-gradient(circle at center, #0B1324 0%, #0F172A 100%);
+      color: #f1f5f9;
+      overflow: hidden;
+      text-align: center;
+    }
+    .card {
+      background: rgba(30, 41, 59, 0.85);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 1rem;
+      padding: 2rem;
+      max-width: 400px;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      backdrop-filter: blur(10px);
+    }
+    .icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .advisory {
+      margin-top: 1rem;
+      font-size: 0.9rem;
+      color: #94a3b8;
+    }
+    .particle {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.25);
+      box-shadow: 0 0 8px rgba(255,255,255,0.3);
+      animation: float 8s ease-in-out infinite;
+    }
+    @keyframes float {
+      0% { transform: translateY(0); opacity: 0.3; }
+      50% { transform: translateY(-30px); opacity: 0.8; }
+      100% { transform: translateY(0); opacity: 0.3; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Floating particles -->
+  <script>
+    for (let i = 0; i < 25; i++) {
+      const p = document.createElement('div');
+      p.className = 'particle';
+      p.style.top = Math.random() * 100 + 'vh';
+      p.style.left = Math.random() * 100 + 'vw';
+      p.style.animationDuration = 6 + Math.random() * 6 + 's';
+      p.style.animationDelay = Math.random() * 4 + 's';
+      document.body.appendChild(p);
+    }
+  </script>
+
+  <!-- Card -->
+  <div class="card">
+    <div class="icon">✅</div>
+    <h1>Email Verified</h1>
+    <p>Your email is confirmed. Welcome to <strong>FridgeF</strong>.</p>
+    <p class="advisory">
+      To continue, open the FridgeF mobile app.<br>
+      If you don’t have it installed, download it from the App Store or Google Play.
+    </p>
+  </div>
+</body>
+</html>
