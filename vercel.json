@@ -1,5 +1,5 @@
 {
   "rewrites": [
-    { "source": "/verified", "destination": "/verified.html" }
+    { "source": "/", "destination": "/verified.html" }
   ]
 }
